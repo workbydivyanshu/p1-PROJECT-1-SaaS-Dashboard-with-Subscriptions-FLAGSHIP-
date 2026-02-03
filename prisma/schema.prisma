@@ -34,6 +34,9 @@ model User {
   stripePriceId          String?
   stripeCurrentPeriodEnd DateTime?
 
+  razorpayCustomerId     String?   @unique
+  razorpaySubscriptionId String?   @unique
+
   accounts Account[]
   sessions Session[]
 

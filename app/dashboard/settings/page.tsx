@@ -1,7 +1,7 @@
 import { auth } from "@/auth"
 import { redirect } from "next/navigation"
 import { prisma } from "@/lib/db"
-import { SubscriptionButton } from "@/components/subscription-button"
+import { RazorpayButton } from "@/components/razorpay-button"
 
 const SettingsPage = async () => {
   const session = await auth()
@@ -37,7 +37,7 @@ const SettingsPage = async () => {
                     You are currently on the <span className="font-bold text-primary">{isPro ? "Pro" : "Free"}</span> plan.
                  </p>
               </div>
-              <SubscriptionButton isPro={isPro} />
+              <RazorpayButton />
            </div>
         </div>
       </div>
