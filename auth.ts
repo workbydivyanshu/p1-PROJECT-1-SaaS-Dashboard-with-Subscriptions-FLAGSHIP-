@@ -15,12 +15,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         },
         async authorize(credentials) {
           if (credentials?.email === "demo@example.com" && credentials?.password === "demo123") {
-            // Return a mock user for demo
-            return {
-              id: "demo-user-id",
-              name: "Demo User",
-              email: "demo@example.com",
-            }
+            
+            // Ensure demo user exists in DB for Foreign Key relations
+            const user = await prisma.user.upsert({
+                where: { email: "demo@example.com" },
+                update: {},
+                create: {
+                    id: "demo-user-id",
+                    email: "demo@example.com",
+                    name: "Demo User",
+                    image: "https://github.com/shadcn.png"
+                }
+            })
+
+            return user
           }
           return null
         }
