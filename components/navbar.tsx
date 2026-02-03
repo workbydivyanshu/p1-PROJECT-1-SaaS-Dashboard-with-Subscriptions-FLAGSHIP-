@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { auth } from "@/auth"
+import { ModeToggle } from "@/components/mode-toggle"
 
 export async function Navbar() {
   const session = await auth()
@@ -26,6 +27,7 @@ export async function Navbar() {
             </Link>
           </>
         )}
+        <ModeToggle />
       </div>
     </nav>
   )
