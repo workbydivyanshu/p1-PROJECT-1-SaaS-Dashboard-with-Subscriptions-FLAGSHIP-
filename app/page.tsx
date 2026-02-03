@@ -66,6 +66,51 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Pricing */}
+      <section id="pricing" className="py-24 px-4 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight mb-4">Simple, transparent pricing</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Start free, upgrade when you need more power.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="bg-background border-muted">
+              <CardHeader>
+                <CardTitle className="text-2xl">Free</CardTitle>
+                <p className="text-4xl font-bold">$0<span className="text-lg font-normal text-muted-foreground">/month</span></p>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-muted-foreground">✓ Up to 3 projects</p>
+                <p className="text-muted-foreground">✓ Basic analytics</p>
+                <p className="text-muted-foreground">✓ 2 team members</p>
+                <Link href="/dashboard" className="block mt-6">
+                  <Button variant="outline" className="w-full">Get Started</Button>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary/5 border-primary/50 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">Popular</div>
+              <CardHeader>
+                <CardTitle className="text-2xl">Pro</CardTitle>
+                <p className="text-4xl font-bold">$20<span className="text-lg font-normal text-muted-foreground">/month</span></p>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-muted-foreground">✓ Unlimited projects</p>
+                <p className="text-muted-foreground">✓ Advanced analytics</p>
+                <p className="text-muted-foreground">✓ Unlimited team members</p>
+                <p className="text-muted-foreground">✓ Priority support</p>
+                <Link href="/dashboard/settings" className="block mt-6">
+                  <Button className="w-full">Upgrade to Pro</Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
       
       {/* Footer */}
       <footer className="py-12 border-t bg-background">

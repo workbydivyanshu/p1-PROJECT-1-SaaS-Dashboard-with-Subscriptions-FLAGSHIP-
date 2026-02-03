@@ -7,7 +7,7 @@ const SettingsPage = async () => {
   const session = await auth()
 
   if (!session?.user) {
-    redirect("/")
+    redirect("/api/auth/signin")
   }
 
   const user = await prisma.user.findUnique({
