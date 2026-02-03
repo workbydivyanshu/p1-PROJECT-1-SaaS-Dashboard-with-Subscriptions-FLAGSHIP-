@@ -11,8 +11,8 @@ export default function Home() {
       
       {/* Hero */}
       <section className="flex-1 flex flex-col items-center justify-center text-center px-4 py-24 lg:py-32 bg-gradient-to-b from-background via-muted/30 to-background overflow-hidden relative">
-        <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl opacity-20" />
+        <div className="absolute inset-0 bg-grid-black/[0.02] -z-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl opacity-20 -z-10 pointer-events-none" />
         
         <span className="inline-block py-1 px-3 rounded-full bg-muted text-sm font-medium mb-6">
           🚀 v1.0 is now live
