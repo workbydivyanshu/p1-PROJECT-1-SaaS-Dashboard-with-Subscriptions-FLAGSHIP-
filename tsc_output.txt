@@ -1,0 +1,27 @@
+.next/types/validator.ts(99,31): error TS2344: Type 'typeof import("/home/divyu/Documents/GitHub/p1-PROJECT-1-SaaS-Dashboard-with-Subscriptions-FLAGSHIP-/app/api/projects/[projectId]/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/projects/[projectId]">'.
+  Types of property 'PATCH' are incompatible.
+    Type '(req: Request, { params }: { params: { projectId: string; }; }) => Promise<NextResponse<any>>' is not assignable to type '(request: NextRequest, context: { params: Promise<{ projectId: string; }>; }) => void | Response | Promise<void | Response>'.
+      Types of parameters '__1' and 'context' are incompatible.
+        Type '{ params: Promise<{ projectId: string; }>; }' is not assignable to type '{ params: { projectId: string; }; }'.
+          Types of property 'params' are incompatible.
+            Property 'projectId' is missing in type 'Promise<{ projectId: string; }>' but required in type '{ projectId: string; }'.
+.next/types/validator.ts(108,31): error TS2344: Type 'typeof import("/home/divyu/Documents/GitHub/p1-PROJECT-1-SaaS-Dashboard-with-Subscriptions-FLAGSHIP-/app/api/projects/[projectId]/tasks/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/projects/[projectId]/tasks">'.
+  Types of property 'GET' are incompatible.
+    Type '(req: Request, { params }: { params: { projectId: string; }; }) => Promise<NextResponse<any>>' is not assignable to type '(request: NextRequest, context: { params: Promise<{ projectId: string; }>; }) => void | Response | Promise<void | Response>'.
+      Types of parameters '__1' and 'context' are incompatible.
+        Type '{ params: Promise<{ projectId: string; }>; }' is not assignable to type '{ params: { projectId: string; }; }'.
+          Types of property 'params' are incompatible.
+            Property 'projectId' is missing in type 'Promise<{ projectId: string; }>' but required in type '{ projectId: string; }'.
+.next/types/validator.ts(126,31): error TS2344: Type 'typeof import("/home/divyu/Documents/GitHub/p1-PROJECT-1-SaaS-Dashboard-with-Subscriptions-FLAGSHIP-/app/api/tasks/[taskId]/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/tasks/[taskId]">'.
+  Types of property 'PATCH' are incompatible.
+    Type '(req: Request, { params }: { params: { taskId: string; }; }) => Promise<NextResponse<any>>' is not assignable to type '(request: NextRequest, context: { params: Promise<{ taskId: string; }>; }) => void | Response | Promise<void | Response>'.
+      Types of parameters '__1' and 'context' are incompatible.
+        Type '{ params: Promise<{ taskId: string; }>; }' is not assignable to type '{ params: { taskId: string; }; }'.
+          Types of property 'params' are incompatible.
+            Property 'taskId' is missing in type 'Promise<{ taskId: string; }>' but required in type '{ taskId: string; }'.
+app/dashboard/projects/[projectId]/page.tsx(68,47): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/dashboard/projects/[projectId]/page.tsx(73,43): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/dashboard/projects/[projectId]/page.tsx(73,74): error TS7006: Parameter 'task' implicitly has an 'any' type.
+app/dashboard/projects/[projectId]/page.tsx(83,43): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/dashboard/projects/page.tsx(60,24): error TS7006: Parameter 'project' implicitly has an 'any' type.
+lib/db.ts(1,10): error TS2305: Module '"@prisma/client"' has no exported member 'PrismaClient'.
