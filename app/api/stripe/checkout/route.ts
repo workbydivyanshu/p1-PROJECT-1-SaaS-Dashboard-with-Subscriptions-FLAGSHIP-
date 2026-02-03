@@ -1,6 +1,6 @@
 import { auth } from "@/auth"
 import { prisma } from "@/lib/db"
-import { stripe } from "@/lib/stripe"
+import { getStripe } from "@/lib/stripe"
 import { NextResponse } from "next/server"
 
 const settingsUrl = process.env.NEXT_PUBLIC_APP_URL + "/dashboard/settings"
@@ -27,7 +27,7 @@ export async function POST(_req: Request) {
 
     // If user already has a stripe plan, redirect to portal
     if (dbUser.stripeCustomerId && dbUser.stripePriceId) {
-      const stripeSession = await stripe.billingPortal.sessions.create({
+      const stripeSession = await getStripe().billingPortal.sessions.create({
         customer: dbUser.stripeCustomerId,
         return_url: settingsUrl,
       })
@@ -36,7 +36,7 @@ export async function POST(_req: Request) {
     }
 
     // Otherwise, create checkout session
-    const stripeSession = await stripe.checkout.sessions.create({
+    const stripeSession = await getStripe().checkout.sessions.create({
       success_url: settingsUrl,
       cancel_url: settingsUrl,
       payment_method_types: ["card"],
